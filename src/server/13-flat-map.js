@@ -39,3 +39,14 @@ const users = [
   console.log('flatMap calender: ', Object.values(calendars).flatMap(item => {
     return item.map(date => date.startDate);
   } ));
+
+  function solution(lines) {
+    return lines.flatMap(item => item.split(' ').length).reduce((sum, item) => sum += item, 0);
+  }
+
+  console.log(' retorne el número de palabras totales', solution([
+    "Beautiful is better than ugly",
+    "Explicit is better than implicit",
+    "Simple is better than complex",
+    "Complex is better than complicated",
+  ]));
